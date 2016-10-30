@@ -2,8 +2,6 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'sqlite:'.dirname(__DIR__).'/database/stalker.sqlite',
     'charset' => 'utf8',
 ];
