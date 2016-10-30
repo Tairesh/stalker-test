@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'player_id')->textInput() ?>
+    <?= $form->field($model, 'player_id')->dropDownList(yii\helpers\ArrayHelper::map(app\models\Player::find()->all(),'id','name')) ?>
 
     <?= $form->field($model, 'item_id')->textInput() ?>
 

@@ -29,6 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'player_id',
+            [
+                'attribute' => 'player',
+                'value' => Html::a($model->player->name, ['player/view', 'id' => $model->player_id]),
+                'format' => 'raw',
+            ],
             'item_id',
             'using_count',
             'location',
